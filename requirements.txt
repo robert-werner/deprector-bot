@@ -1,0 +1,5 @@
+aiofiles
+aiogram<3.0.0
+asyncpg
+sqlalchemy[asyncio]
+deprector @ git+https://github.com/robert-werner/deprector.git

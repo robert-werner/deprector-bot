@@ -1,0 +1,1 @@
+INSERT INTO results (speech, is_depression) VALUES ({speech}, {is_depression})

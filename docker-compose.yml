@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  deprector:
+    build:
+      context: .
+      dockerfile: deprector.Dockerfile
+    links:
+      - "deprector_db:db"
+  deprector_db:
+    image: postgres:15-alpine
+    container_name: deprector_db
+    environment:
+      - POSTGRES_PASSWORD=r3TcrFCJAO
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5432:5432"
